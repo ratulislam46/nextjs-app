@@ -3,7 +3,7 @@ import React from 'react';
 const AddressPage = () => {
     return (
         <div>
-            <h1>address page</h1>
+            <h1  className='font-bold text-3xl'>Address page</h1>
         </div>
     );
 };
