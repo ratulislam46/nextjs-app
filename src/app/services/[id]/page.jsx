@@ -28,16 +28,25 @@ const ServiceDetailsPae = ({ params }) => {
 
     const id = params.id;
     const filterData = data.find((d) => d._id == id);
-    console.log(filterData);
+    // console.log(filterData);
 
-    return (
-        <div>
-            <h1>Services Details page</h1>
-            <p>ID: {params.id}</p>
-            <h3>Devition: {filterData.divition}</h3>
-            <h3>City: {filterData.city}</h3>
-        </div>
-    );
+    if(filterData){
+        return (
+            <div>
+                <h1>Services Details page</h1>
+                <p>ID: {params.id}</p>
+                <h3>Devition: {filterData.divition}</h3>
+                <h3>City: {filterData.city}</h3>
+            </div>
+        );
+    }
+    else{
+        return(
+            <>
+            <p>NOT FOUND SERVICE</p>
+            </>
+        )
+    }
 };
 
 export default ServiceDetailsPae;

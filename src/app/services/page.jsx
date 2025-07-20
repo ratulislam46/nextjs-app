@@ -30,7 +30,7 @@ const Services = () => {
             <p className='font-bold text-3xl'>Services page</p>
 
             {
-                data.map(d => {
+                data?.map(d => {
                     return (
                         <div key={d._id}>
                             <Link href={`/services/${d._id}`}>
